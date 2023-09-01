@@ -6,7 +6,7 @@ MAINTAINER Luis Rovirosa <luisrovirosa@gmail.com>
 RUN apt-get update && \
     apt-get install git unzip -y
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
-    php composer-setup.php && \
+    php composer-setup.php --version=1.10.26 && \
     php -r "unlink('composer-setup.php');" && \
     mv composer.phar /usr/local/bin/composer
 
